@@ -1,4 +1,5 @@
 ﻿using DB;
+using DB.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace WinFormsApp2.Services

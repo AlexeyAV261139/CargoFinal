@@ -1,4 +1,4 @@
-using DB;
+using DB.Models;
 
 namespace WinFormsApp2
 {

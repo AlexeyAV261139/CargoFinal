@@ -1,4 +1,4 @@
-﻿namespace DB
+﻿namespace DB.Models
 {
     public abstract class Entity
     {

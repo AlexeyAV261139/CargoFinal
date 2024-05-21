@@ -1,4 +1,4 @@
-﻿using DB;
+﻿using DB.Models;
 using WinFormsApp2.Services;
 
 namespace WinFormsApp2

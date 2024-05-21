@@ -3,6 +3,7 @@ using System;
 using DB;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DB.Migrations
 {
     [DbContext(typeof(CargoContext))]
-    partial class CargoContextModelSnapshot : ModelSnapshot
+    [Migration("20240521232212_2")]
+    partial class _2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.0");
@@ -51,47 +54,6 @@ namespace DB.Migrations
                     b.ToTable("CargoTypes");
                 });
 
-            modelBuilder.Entity("DB.DifficultyClass", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("DifficultyClasses");
-                });
-
-            modelBuilder.Entity("DB.Route", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Destination")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<Guid>("DifficultyClassId")
-                        .HasColumnType("TEXT");
-
-                    b.Property<int?>("DistanceKm")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<decimal?>("Price")
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("DifficultyClassId");
-
-                    b.ToTable("Routes");
-                });
-
             modelBuilder.Entity("DB.CargoEntity", b =>
                 {
                     b.HasOne("DB.CargoTypeEntity", "CargoType")
@@ -103,25 +65,9 @@ namespace DB.Migrations
                     b.Navigation("CargoType");
                 });
 
-            modelBuilder.Entity("DB.Route", b =>
-                {
-                    b.HasOne("DB.DifficultyClass", "DifficultyClass")
-                        .WithMany("routes")
-                        .HasForeignKey("DifficultyClassId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("DifficultyClass");
-                });
-
             modelBuilder.Entity("DB.CargoTypeEntity", b =>
                 {
                     b.Navigation("Entities");
-                });
-
-            modelBuilder.Entity("DB.DifficultyClass", b =>
-                {
-                    b.Navigation("routes");
                 });
 #pragma warning restore 612, 618
         }
