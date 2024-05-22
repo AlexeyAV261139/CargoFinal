@@ -17,6 +17,16 @@ namespace DB
         {
             optionsBuilder.UseSqlite("Data Source=C:\\Users\\User\\Desktop\\programming\\My programs\\WinFormsApp2\\DB\\DB\\Cargos.db");
         }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<DifficultyClass>().HasData(
+                [
+                new DifficultyClass { Name="1"},
+                new DifficultyClass { Name="2"},
+                new DifficultyClass { Name="3"},
+                ]);
+        }
     }
 
     public class Route : Entity
@@ -30,6 +40,9 @@ namespace DB
         public Guid DifficultyClassId {  get; set; }
 
         public DifficultyClass? DifficultyClass { get; set; }
+
+        public override string ToString()
+            => Destination;
     }
 
     public class DifficultyClass : Entity
@@ -37,6 +50,9 @@ namespace DB
         public required string Name { get; set; }
 
         public List<Route> routes { get; set; } = [];
+
+        public override string ToString()
+            => Name;
     }
 
 }

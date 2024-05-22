@@ -1,4 +1,4 @@
-﻿namespace WinFormsApp2
+﻿namespace WinFormsApp2.Extensions
 {
     public static class DGVExtensions
     {
