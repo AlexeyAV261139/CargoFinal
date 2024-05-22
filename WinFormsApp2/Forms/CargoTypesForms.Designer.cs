@@ -106,6 +106,7 @@
             Controls.Add(dgvTypes);
             Name = "CargoTypesForms";
             Text = "Form1";
+            Load += CargoTypesForms_Load;
             ((System.ComponentModel.ISupportInitialize)dgvTypes).EndInit();
             ResumeLayout(false);
             PerformLayout();

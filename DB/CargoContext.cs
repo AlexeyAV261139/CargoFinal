@@ -23,7 +23,7 @@ namespace DB
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite("Data Source=C:\\Users\\User\\Desktop\\programming\\My programs\\WinFormsApp2\\DB\\DB\\Cargos.db");
+            optionsBuilder.UseSqlite("Data Source=\"\\\\206-01\\Users\\Public\\Documents\\Для всех\\Fktrctq\\Cargos.db\"");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

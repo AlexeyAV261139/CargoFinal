@@ -34,6 +34,7 @@
             btRoute = new Button();
             btTrip = new Button();
             label1 = new Label();
+            button1 = new Button();
             SuspendLayout();
             // 
             // btCar
@@ -97,12 +98,23 @@
             label1.TextAlign = ContentAlignment.TopCenter;
             label1.Click += label1_Click;
             // 
+            // button1
+            // 
+            button1.Location = new Point(422, 12);
+            button1.Name = "button1";
+            button1.Size = new Size(80, 23);
+            button1.TabIndex = 6;
+            button1.Text = "Типы грузов";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
-            ClientSize = new Size(436, 171);
+            ClientSize = new Size(536, 171);
+            Controls.Add(button1);
             Controls.Add(label1);
             Controls.Add(btTrip);
             Controls.Add(btRoute);
@@ -123,5 +135,6 @@
         private Button btRoute;
         private Button btTrip;
         private Label label1;
+        private Button button1;
     }
 }

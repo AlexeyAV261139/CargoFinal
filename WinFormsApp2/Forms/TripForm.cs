@@ -124,6 +124,8 @@ namespace WinFormsApp2
             dgvDrivers.Columns["DriverId"].Visible = false;
             dgvDrivers.Columns["CarId"].Visible = false;
             dgvDrivers.Columns["CargoId"].Visible = false;
+            dgvDrivers.Columns["Cargo"].Visible = false;
+
 
             dgvDrivers.Columns["Start"].HeaderText = "C";
             dgvDrivers.Columns["End"].HeaderText = "ПО";

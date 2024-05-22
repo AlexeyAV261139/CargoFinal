@@ -14,7 +14,7 @@
 
         private void btCargo_Click(object sender, EventArgs e)
         {
-            new CarForms().Show();
+            new CargoForm().Show();
         }
 
         private void btDriver_Click(object sender, EventArgs e)
@@ -40,6 +40,11 @@
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            new CargoTypesForms().Show();
         }
     }
 }

@@ -52,6 +52,10 @@ namespace WinFormsApp2
                 yield return type.Id;
             }
         }
-        
+
+        private void CargoTypesForms_Load(object sender, EventArgs e)
+        {
+            UpdateTable();
+        }
     }
 }
