@@ -1,6 +1,6 @@
-using DB;
 using DB.Models;
 using System.ComponentModel.DataAnnotations;
+using WinFormsApp2.DTO;
 using WinFormsApp2.Extensions;
 using WinFormsApp2.Services;
 

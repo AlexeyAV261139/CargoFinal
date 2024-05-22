@@ -6,7 +6,7 @@ namespace DB
 {
     public class CargoContext : DbContext
     {
-        public DbSet<CargoEntity> Cargos { get; set; }
+        public DbSet<Cargo> Cargos { get; set; }
 
         public DbSet<CargoTypeEntity> CargoTypes { get; set; }
 
@@ -17,6 +17,8 @@ namespace DB
         public DbSet<Driver> Drivers { get; set; }
 
         public DbSet<Car> Cars { get; set; }
+
+        public DbSet<Trip> Trips { get; set; }
 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -35,15 +37,25 @@ namespace DB
         }
     }
 
-    public class Car : Entity
+    public class Trip : Entity
     {
-        [MinLength(2)]
-        public string Brand { get; set; } = null!;
+        public DateTime Start { get; set; }
+        public DateTime End { get; set; }
 
-        [MinLength(2)]
-        public string Number { get; set; } = null!;
+        public Route? Route { get; set; }
 
-        [Range(0, int.MaxValue)]
-        public int LoadCapacityKg { get; set; }
-    }
+        public Guid RouteId { get; set; }
+
+        public Driver? Driver { get; set; }
+
+        public Guid DriverId { get; set; }
+
+        public Car? Car { get; set; }
+
+        public Guid CarId { get; set; }
+
+        public Cargo? Cargo { get; set; }
+
+        public Guid CargoId { get; set; }
+    }    
 }

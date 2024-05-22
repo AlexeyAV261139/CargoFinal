@@ -76,7 +76,7 @@ namespace WinFormsApp2
 
         private async void btDelete_Click(object sender, EventArgs e)
         {
-            foreach (var cargo in dgvCargos.GetSelectedItems<CargoEntity>())
+            foreach (var cargo in dgvCargos.GetSelectedItems<Cargo>())
             {
                 await _services.CargoService.DeleteCargo(cargo.Id);
             }

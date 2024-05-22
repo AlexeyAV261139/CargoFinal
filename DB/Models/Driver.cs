@@ -20,5 +20,10 @@ namespace DB.Models
         public Guid DifficultyClassId { get; set; }
 
         public DifficultyClass? DifficultyClass { get; set; }
+
+        public List<Trip> Trips { get; set; } = [];
+
+        public override string ToString()
+            => $"{LastName} {FirstName} {Patronymic}";
     }
 }

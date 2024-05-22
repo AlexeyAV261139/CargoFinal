@@ -6,7 +6,7 @@ namespace WinFormsApp2
         static void Main()
         {
             ApplicationConfiguration.Initialize();
-            Application.Run(new CarForms());
+            Application.Run(new TripForm());
         }
     }
 }

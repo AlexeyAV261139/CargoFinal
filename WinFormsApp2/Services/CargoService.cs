@@ -14,7 +14,7 @@ namespace WinFormsApp2.Services
     {
         public async Task CreateCargo(CargoDTO dto)
         {
-            CargoEntity cargo = new()
+            Cargo cargo = new()
             {
                 Requirements = dto.Reequipments,
                 CargoTypeId = dto.TypeId,
@@ -24,7 +24,7 @@ namespace WinFormsApp2.Services
             await context.SaveChangesAsync();
         }
 
-        public async Task<List<CargoEntity>> GetCargos()
+        public async Task<List<Cargo>> GetCargos()
         {
             using CargoContext context = new();
             return await context.Cargos
