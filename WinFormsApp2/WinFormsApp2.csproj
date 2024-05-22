@@ -17,6 +17,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Forms\CarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Forms\DriverForm.cs">
       <SubType>Form</SubType>
     </Compile>

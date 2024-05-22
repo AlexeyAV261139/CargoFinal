@@ -1,4 +1,5 @@
 ﻿using DB;
+using DB.Models;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 

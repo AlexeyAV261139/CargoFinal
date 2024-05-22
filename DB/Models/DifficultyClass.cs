@@ -1,6 +1,4 @@
-﻿using DB.Models;
-
-namespace DB
+﻿namespace DB.Models
 {
     public class DifficultyClass : Entity
     {

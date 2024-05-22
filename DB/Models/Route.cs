@@ -1,6 +1,4 @@
-﻿using DB.Models;
-
-namespace DB
+﻿namespace DB.Models
 {
     public class Route : Entity
     {
@@ -8,9 +6,9 @@ namespace DB
 
         public int? DistanceKm { get; set; }
 
-        public decimal? Price {  get; set; }
+        public decimal? Price { get; set; }
 
-        public Guid DifficultyClassId {  get; set; }
+        public Guid DifficultyClassId { get; set; }
 
         public DifficultyClass? DifficultyClass { get; set; }
 

@@ -16,6 +16,9 @@ namespace DB
 
         public DbSet<Driver> Drivers { get; set; }
 
+        public DbSet<Car> Cars { get; set; }
+
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlite("Data Source=C:\\Users\\User\\Desktop\\programming\\My programs\\WinFormsApp2\\DB\\DB\\Cargos.db");
@@ -25,30 +28,22 @@ namespace DB
         {
             modelBuilder.Entity<DifficultyClass>().HasData(
                 [
-                new DifficultyClass { Name="1"},
-                new DifficultyClass { Name="2"},
-                new DifficultyClass { Name="3"},
+                new DifficultyClass { Name = "1" },
+                    new DifficultyClass { Name = "2" },
+                    new DifficultyClass { Name = "3" },
                 ]);
         }
     }
 
-    public class Driver : Entity
+    public class Car : Entity
     {
-        [MinLength(3)]
-        public string FirstName { get; set; } = null!;
+        [MinLength(2)]
+        public string Brand { get; set; } = null!;
 
-        [MinLength(3)]
-        public string LastName { get; set; } = null!;
+        [MinLength(2)]
+        public string Number { get; set; } = null!;
 
-        public string? Patronymic { get; set; }
-
-        public DateTime Birthdate { get; set; }
-
-        [Phone]
-        public string Phone {  get; set; } = null!;
-
-        public Guid DifficultyClassId { get; set; }
-
-        public DifficultyClass? DifficultyClass { get; set; }
+        [Range(0, int.MaxValue)]
+        public int LoadCapacityKg { get; set; }
     }
 }
