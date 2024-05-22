@@ -1,3 +1,5 @@
+using WinFormsApp2.Forms;
+
 namespace WinFormsApp2
 {
     internal static class Program
@@ -6,7 +8,7 @@ namespace WinFormsApp2
         static void Main()
         {
             ApplicationConfiguration.Initialize();
-            Application.Run(new TripForm());
+            Application.Run(new MainForm());
         }
     }
 }

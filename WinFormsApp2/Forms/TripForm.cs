@@ -136,10 +136,19 @@ namespace WinFormsApp2
 
         private async void FillCb()
         {
-            cbCar.DataSource = await _services.CarService.GetCars();
-            cbCargo.DataSource = await _services.CargoService.GetCargos();
-            cbDriver.DataSource = await _services.DriverService.GetDrivers();
-            cbRoute.DataSource = await _services.RouteService.GetRoutes();
+            try
+            {
+                cbCar.DataSource = await _services.CarService.GetCars();
+                cbCargo.DataSource = await _services.CargoService.GetCargos();
+                cbDriver.DataSource = await _services.DriverService.GetSkillAndFreeDrivers(
+                    new List<Guid> 
+                    { 
+                        _selectedRoute!.DifficultyClassId 
+                    });
+                cbRoute.DataSource = await _services.RouteService.GetRoutes();
+            }
+            catch
+            { MessageBox.Show("Упс... Что-то пошло не так."); }
         }
 
         private async Task UpdateDGV()

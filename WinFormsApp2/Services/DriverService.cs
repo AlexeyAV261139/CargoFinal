@@ -34,6 +34,20 @@ namespace WinFormsApp2.Services
                 .ToListAsync();
         }
 
+        public async Task<List<Driver>> GetSkillAndFreeDrivers(List<Guid> skills)
+        {
+            using CargoContext context = new();
+            return await context
+                .Drivers
+                .AsNoTracking()
+                .Include(x => x.DifficultyClass)
+                .AsNoTracking()
+                .Where(x => skills.Contains(x.DifficultyClassId))
+                .Where(x => x.Trips
+                    .All( x => x.End < DateTime.Now))
+                .ToListAsync();
+        }
+
         public async Task DeleteDriver(Guid id)
         {
             using CargoContext context = new();
