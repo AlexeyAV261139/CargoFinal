@@ -39,15 +39,22 @@ namespace WinFormsApp2.Services
                 .ExecuteDeleteAsync();
         }
 
-        //public async Task<ProfitInfo> GetInfoAboutMostProfitableRoute()
-        //{
-        //    using CargoContext context = new();
-        //    await context.Trips
-        //        .Include(x => x.Route)
-        //        .GroupBy(x => x.Route)
-        //        .Max(x => x.)
+        public async Task<Route?> GetInfoAboutMostProfitableRoute(
+            DateTime start,
+            DateTime end)
+        {
+            using CargoContext context = new();
+            return await context.Routes
+                .Include(x => x.Trips)
+                .SelectMany(x => x.Trips
+                    .Where(x => x.End < end && x.End > start))
+                .Select(x => x.Route).FirstAsync();
+                
 
-        //}
+                
+                
+
+        }
 
     }
 

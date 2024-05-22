@@ -33,6 +33,7 @@
             btDriver = new Button();
             btRoute = new Button();
             btTrip = new Button();
+            label1 = new Label();
             SuspendLayout();
             // 
             // btCar
@@ -85,11 +86,24 @@
             btTrip.UseVisualStyleBackColor = true;
             btTrip.Click += btTrip_Click;
             // 
+            // label1
+            // 
+            label1.AutoEllipsis = true;
+            label1.AutoSize = true;
+            label1.Location = new Point(30, 161);
+            label1.Name = "label1";
+            label1.Size = new Size(0, 15);
+            label1.TabIndex = 5;
+            label1.TextAlign = ContentAlignment.TopCenter;
+            label1.Click += label1_Click;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(436, 339);
+            AutoSize = true;
+            ClientSize = new Size(436, 171);
+            Controls.Add(label1);
             Controls.Add(btTrip);
             Controls.Add(btRoute);
             Controls.Add(btDriver);
@@ -98,6 +112,7 @@
             Name = "MainForm";
             Text = "Form1";
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -107,5 +122,6 @@
         private Button btDriver;
         private Button btRoute;
         private Button btTrip;
+        private Label label1;
     }
 }

@@ -31,7 +31,6 @@
             btDelete = new Button();
             label2 = new Label();
             btAdd = new Button();
-            btUpdateTable = new Button();
             dgvDrivers = new DataGridView();
             dtpStart = new DateTimePicker();
             dtpEnd = new DateTimePicker();
@@ -50,7 +49,7 @@
             // 
             // btDelete
             // 
-            btDelete.Location = new Point(257, 517);
+            btDelete.Location = new Point(197, 457);
             btDelete.Name = "btDelete";
             btDelete.Size = new Size(75, 23);
             btDelete.TabIndex = 23;
@@ -76,16 +75,6 @@
             btAdd.Text = "Сохранить";
             btAdd.UseVisualStyleBackColor = true;
             btAdd.Click += btAdd_Click;
-            // 
-            // btUpdateTable
-            // 
-            btUpdateTable.Location = new Point(109, 517);
-            btUpdateTable.Name = "btUpdateTable";
-            btUpdateTable.Size = new Size(75, 23);
-            btUpdateTable.TabIndex = 21;
-            btUpdateTable.Text = "Обновить";
-            btUpdateTable.UseVisualStyleBackColor = true;
-            btUpdateTable.Click += btUpdateTable_Click;
             // 
             // dgvDrivers
             // 
@@ -218,7 +207,6 @@
             Controls.Add(btDelete);
             Controls.Add(label2);
             Controls.Add(btAdd);
-            Controls.Add(btUpdateTable);
             Controls.Add(dgvDrivers);
             Name = "TripForm";
             Text = "Form1";
@@ -233,7 +221,6 @@
         private Button btDelete;
         private Label label2;
         private Button btAdd;
-        private Button btUpdateTable;
         private DataGridView dgvDrivers;
         private DateTimePicker dtpStart;
         private DateTimePicker dtpEnd;

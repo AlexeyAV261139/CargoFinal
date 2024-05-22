@@ -31,7 +31,6 @@
             btDelete = new Button();
             label2 = new Label();
             btAdd = new Button();
-            btUpdateTable = new Button();
             dgvDrivers = new DataGridView();
             tbFirstName = new TextBox();
             tbLastName = new TextBox();
@@ -50,7 +49,7 @@
             // 
             // btDelete
             // 
-            btDelete.Location = new Point(207, 353);
+            btDelete.Location = new Point(48, 322);
             btDelete.Name = "btDelete";
             btDelete.Size = new Size(75, 23);
             btDelete.TabIndex = 23;
@@ -61,7 +60,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(627, 130);
+            label2.Location = new Point(705, 78);
             label2.Name = "label2";
             label2.Size = new Size(127, 15);
             label2.TabIndex = 22;
@@ -69,7 +68,7 @@
             // 
             // btAdd
             // 
-            btAdd.Location = new Point(618, 365);
+            btAdd.Location = new Point(696, 313);
             btAdd.Name = "btAdd";
             btAdd.Size = new Size(75, 23);
             btAdd.TabIndex = 19;
@@ -77,51 +76,41 @@
             btAdd.UseVisualStyleBackColor = true;
             btAdd.Click += btAdd_Click;
             // 
-            // btUpdateTable
-            // 
-            btUpdateTable.Location = new Point(59, 353);
-            btUpdateTable.Name = "btUpdateTable";
-            btUpdateTable.Size = new Size(75, 23);
-            btUpdateTable.TabIndex = 21;
-            btUpdateTable.Text = "Обновить";
-            btUpdateTable.UseVisualStyleBackColor = true;
-            btUpdateTable.Click += btUpdateTable_Click;
-            // 
             // dgvDrivers
             // 
             dgvDrivers.AllowUserToAddRows = false;
             dgvDrivers.AllowUserToDeleteRows = false;
             dgvDrivers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvDrivers.Location = new Point(12, 56);
+            dgvDrivers.Location = new Point(21, 23);
             dgvDrivers.Name = "dgvDrivers";
             dgvDrivers.ReadOnly = true;
-            dgvDrivers.Size = new Size(518, 281);
+            dgvDrivers.Size = new Size(574, 281);
             dgvDrivers.TabIndex = 17;
             // 
             // tbFirstName
             // 
-            tbFirstName.Location = new Point(633, 162);
+            tbFirstName.Location = new Point(711, 110);
             tbFirstName.Name = "tbFirstName";
             tbFirstName.Size = new Size(121, 23);
             tbFirstName.TabIndex = 31;
             // 
             // tbLastName
             // 
-            tbLastName.Location = new Point(633, 191);
+            tbLastName.Location = new Point(711, 139);
             tbLastName.Name = "tbLastName";
             tbLastName.Size = new Size(121, 23);
             tbLastName.TabIndex = 32;
             // 
             // tbPatromic
             // 
-            tbPatromic.Location = new Point(633, 223);
+            tbPatromic.Location = new Point(711, 171);
             tbPatromic.Name = "tbPatromic";
             tbPatromic.Size = new Size(121, 23);
             tbPatromic.TabIndex = 33;
             // 
             // tbPhone
             // 
-            tbPhone.Location = new Point(633, 252);
+            tbPhone.Location = new Point(711, 200);
             tbPhone.Name = "tbPhone";
             tbPhone.Size = new Size(121, 23);
             tbPhone.TabIndex = 34;
@@ -129,7 +118,7 @@
             // cbDificultyClass
             // 
             cbDificultyClass.FormattingEnabled = true;
-            cbDificultyClass.Location = new Point(633, 314);
+            cbDificultyClass.Location = new Point(711, 262);
             cbDificultyClass.Name = "cbDificultyClass";
             cbDificultyClass.Size = new Size(121, 23);
             cbDificultyClass.TabIndex = 35;
@@ -138,7 +127,7 @@
             // lble1
             // 
             lble1.AutoSize = true;
-            lble1.Location = new Point(596, 165);
+            lble1.Location = new Point(674, 113);
             lble1.Name = "lble1";
             lble1.Size = new Size(31, 15);
             lble1.TabIndex = 36;
@@ -147,7 +136,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(569, 194);
+            label1.Location = new Point(647, 142);
             label1.Name = "label1";
             label1.Size = new Size(58, 15);
             label1.TabIndex = 37;
@@ -156,7 +145,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(569, 226);
+            label3.Location = new Point(647, 174);
             label3.Name = "label3";
             label3.Size = new Size(58, 15);
             label3.TabIndex = 38;
@@ -165,7 +154,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(572, 255);
+            label4.Location = new Point(650, 203);
             label4.Name = "label4";
             label4.Size = new Size(55, 15);
             label4.TabIndex = 39;
@@ -174,7 +163,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(560, 317);
+            label5.Location = new Point(638, 265);
             label5.Name = "label5";
             label5.Size = new Size(70, 15);
             label5.TabIndex = 40;
@@ -183,7 +172,7 @@
             // dtpBirthdate
             // 
             dtpBirthdate.Format = DateTimePickerFormat.Short;
-            dtpBirthdate.Location = new Point(633, 281);
+            dtpBirthdate.Location = new Point(711, 229);
             dtpBirthdate.Name = "dtpBirthdate";
             dtpBirthdate.Size = new Size(121, 23);
             dtpBirthdate.TabIndex = 41;
@@ -191,7 +180,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(536, 287);
+            label6.Location = new Point(614, 235);
             label6.Name = "label6";
             label6.Size = new Size(90, 15);
             label6.TabIndex = 42;
@@ -201,7 +190,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(844, 450);
             Controls.Add(label6);
             Controls.Add(dtpBirthdate);
             Controls.Add(label5);
@@ -217,7 +206,6 @@
             Controls.Add(btDelete);
             Controls.Add(label2);
             Controls.Add(btAdd);
-            Controls.Add(btUpdateTable);
             Controls.Add(dgvDrivers);
             Name = "DriverForm";
             Text = "Form1";
@@ -232,7 +220,6 @@
         private Button btDelete;
         private Label label2;
         private Button btAdd;
-        private Button btUpdateTable;
         private DataGridView dgvDrivers;
         private TextBox tbFirstName;
         private TextBox tbLastName;

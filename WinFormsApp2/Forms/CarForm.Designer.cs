@@ -32,7 +32,6 @@
             tbBrand = new TextBox();
             btAdd = new Button();
             label1 = new Label();
-            btUpdateTable = new Button();
             label2 = new Label();
             button1 = new Button();
             tbNumber = new TextBox();
@@ -47,10 +46,10 @@
             dgvCars.AllowUserToAddRows = false;
             dgvCars.AllowUserToDeleteRows = false;
             dgvCars.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvCars.Location = new Point(31, 57);
+            dgvCars.Location = new Point(31, 33);
             dgvCars.Name = "dgvCars";
             dgvCars.ReadOnly = true;
-            dgvCars.Size = new Size(349, 205);
+            dgvCars.Size = new Size(425, 229);
             dgvCars.TabIndex = 0;
             // 
             // tbBrand
@@ -79,16 +78,6 @@
             label1.TabIndex = 3;
             label1.Text = "Марка";
             // 
-            // btUpdateTable
-            // 
-            btUpdateTable.Location = new Point(91, 268);
-            btUpdateTable.Name = "btUpdateTable";
-            btUpdateTable.Size = new Size(75, 23);
-            btUpdateTable.TabIndex = 4;
-            btUpdateTable.Text = "Обновить";
-            btUpdateTable.UseVisualStyleBackColor = true;
-            btUpdateTable.Click += btUpdateTable_Click;
-            // 
             // label2
             // 
             label2.AutoSize = true;
@@ -100,7 +89,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(202, 268);
+            button1.Location = new Point(64, 281);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 6;
@@ -154,7 +143,6 @@
             Controls.Add(btAdd);
             Controls.Add(tbBrand);
             Controls.Add(label1);
-            Controls.Add(btUpdateTable);
             Controls.Add(dgvCars);
             Name = "CarForms";
             Text = "Form1";
@@ -170,7 +158,6 @@
         private TextBox tbBrand;
         private Button btAdd;
         private Label label1;
-        private Button btUpdateTable;
         private Label label2;
         private Button button1;
         private TextBox tbNumber;

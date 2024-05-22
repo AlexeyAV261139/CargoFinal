@@ -133,18 +133,14 @@ namespace WinFormsApp2
             dgvDrivers.Columns["Cargo"].HeaderText = "Груз";
 
         }
-
+       
         private async void FillCb()
         {
             try
             {
                 cbCar.DataSource = await _services.CarService.GetCars();
                 cbCargo.DataSource = await _services.CargoService.GetCargos();
-                cbDriver.DataSource = await _services.DriverService.GetSkillAndFreeDrivers(
-                    new List<Guid> 
-                    { 
-                        _selectedRoute!.DifficultyClassId 
-                    });
+                cbDriver.DataSource = await _services.DriverService.GetDrivers();
                 cbRoute.DataSource = await _services.RouteService.GetRoutes();
             }
             catch

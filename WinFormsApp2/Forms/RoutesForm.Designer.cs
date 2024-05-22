@@ -32,7 +32,6 @@
             label2 = new Label();
             btAdd = new Button();
             label1 = new Label();
-            btUpdateTable = new Button();
             dgvRoutes = new DataGridView();
             cbDificultyClass = new ComboBox();
             tbDestination = new TextBox();
@@ -82,25 +81,15 @@
             label1.TabIndex = 20;
             label1.Text = "Место назначения";
             // 
-            // btUpdateTable
-            // 
-            btUpdateTable.Location = new Point(59, 353);
-            btUpdateTable.Name = "btUpdateTable";
-            btUpdateTable.Size = new Size(75, 23);
-            btUpdateTable.TabIndex = 21;
-            btUpdateTable.Text = "Обновить";
-            btUpdateTable.UseVisualStyleBackColor = true;
-            btUpdateTable.Click += btUpdateTable_Click;
-            // 
-            // dgvCargos
+            // dgvRoutes
             // 
             dgvRoutes.AllowUserToAddRows = false;
             dgvRoutes.AllowUserToDeleteRows = false;
             dgvRoutes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvRoutes.Location = new Point(12, 56);
-            dgvRoutes.Name = "dgvCargos";
+            dgvRoutes.Name = "dgvRoutes";
             dgvRoutes.ReadOnly = true;
-            dgvRoutes.Size = new Size(399, 281);
+            dgvRoutes.Size = new Size(445, 281);
             dgvRoutes.TabIndex = 17;
             // 
             // cbDificultyClass
@@ -176,7 +165,6 @@
             Controls.Add(label2);
             Controls.Add(btAdd);
             Controls.Add(label1);
-            Controls.Add(btUpdateTable);
             Controls.Add(dgvRoutes);
             Name = "RoutesForm";
             Text = "Form1";
@@ -192,7 +180,6 @@
         private Label label2;
         private Button btAdd;
         private Label label1;
-        private Button btUpdateTable;
         private DataGridView dgvRoutes;
         private ComboBox cbDificultyClass;
         private TextBox tbDestination;

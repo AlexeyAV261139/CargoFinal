@@ -44,8 +44,23 @@ namespace WinFormsApp2.Services
                 .AsNoTracking()
                 .Where(x => skills.Contains(x.DifficultyClassId))
                 .Where(x => x.Trips
-                    .All( x => x.End < DateTime.Now))
+                    .All(x => x.End < DateTime.Now))
                 .ToListAsync();
+        }
+
+        public async Task<List<Driver>> GetDriverByDateAndDirection(
+            DateTime start,        
+            DateTime end,
+            Guid routeId)
+        { 
+            using CargoContext context = new();
+            return await context.Drivers
+                .Include(x => x.Trips)
+                .Where(x => x.Trips
+                    .Any(x => x.End < end && x.End > start) &&
+                    x.Trips
+                    .Any(x => x.RouteId == routeId))
+                .ToListAsync();                   
         }
 
         public async Task DeleteDriver(Guid id)
@@ -53,7 +68,7 @@ namespace WinFormsApp2.Services
             using CargoContext context = new();
             await context.Drivers
                 .Where(x => x.Id == id)
-                .ExecuteDeleteAsync();                
+                .ExecuteDeleteAsync();
         }
     }
 

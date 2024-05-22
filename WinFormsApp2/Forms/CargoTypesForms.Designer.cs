@@ -32,7 +32,6 @@
             tbName = new TextBox();
             btAdd = new Button();
             label1 = new Label();
-            btUpdateTable = new Button();
             label2 = new Label();
             button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvTypes).BeginInit();
@@ -43,22 +42,22 @@
             dgvTypes.AllowUserToAddRows = false;
             dgvTypes.AllowUserToDeleteRows = false;
             dgvTypes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvTypes.Location = new Point(58, 84);
+            dgvTypes.Location = new Point(12, 65);
             dgvTypes.Name = "dgvTypes";
             dgvTypes.ReadOnly = true;
-            dgvTypes.Size = new Size(240, 150);
+            dgvTypes.Size = new Size(286, 150);
             dgvTypes.TabIndex = 0;
             // 
             // tbName
             // 
-            tbName.Location = new Point(536, 167);
+            tbName.Location = new Point(448, 130);
             tbName.Name = "tbName";
             tbName.Size = new Size(100, 23);
             tbName.TabIndex = 1;
             // 
             // btAdd
             // 
-            btAdd.Location = new Point(497, 211);
+            btAdd.Location = new Point(409, 174);
             btAdd.Name = "btAdd";
             btAdd.Size = new Size(75, 23);
             btAdd.TabIndex = 2;
@@ -69,26 +68,16 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(440, 170);
+            label1.Location = new Point(352, 133);
             label1.Name = "label1";
             label1.Size = new Size(90, 15);
             label1.TabIndex = 3;
             label1.Text = "Наименование";
             // 
-            // btUpdateTable
-            // 
-            btUpdateTable.Location = new Point(131, 240);
-            btUpdateTable.Name = "btUpdateTable";
-            btUpdateTable.Size = new Size(75, 23);
-            btUpdateTable.TabIndex = 4;
-            btUpdateTable.Text = "Обновить";
-            btUpdateTable.UseVisualStyleBackColor = true;
-            btUpdateTable.Click += btUpdateTable_Click;
-            // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(440, 137);
+            label2.Location = new Point(352, 100);
             label2.Name = "label2";
             label2.Size = new Size(134, 15);
             label2.TabIndex = 5;
@@ -96,7 +85,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(304, 132);
+            button1.Location = new Point(55, 235);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 6;
@@ -108,13 +97,12 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(784, 363);
+            ClientSize = new Size(611, 314);
             Controls.Add(button1);
             Controls.Add(label2);
             Controls.Add(btAdd);
             Controls.Add(tbName);
             Controls.Add(label1);
-            Controls.Add(btUpdateTable);
             Controls.Add(dgvTypes);
             Name = "CargoTypesForms";
             Text = "Form1";
@@ -129,7 +117,6 @@
         private TextBox tbName;
         private Button btAdd;
         private Label label1;
-        private Button btUpdateTable;
         private Label label2;
         private Button button1;
     }
