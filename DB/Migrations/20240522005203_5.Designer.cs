@@ -3,6 +3,7 @@ using System;
 using DB;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DB.Migrations
 {
     [DbContext(typeof(CargoContext))]
-    partial class CargoContextModelSnapshot : ModelSnapshot
+    [Migration("20240522005203_5")]
+    partial class _5
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.0");
@@ -34,17 +37,17 @@ namespace DB.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("8d273827-3f87-4175-9afd-1997575ba2d8"),
+                            Id = new Guid("a64c02e2-44f3-429b-98a3-8c839c470eb1"),
                             Name = "1"
                         },
                         new
                         {
-                            Id = new Guid("e88db540-3786-4a19-9626-27113dc4a5ee"),
+                            Id = new Guid("5591899d-6f9d-4348-b9b1-77ea35e752c2"),
                             Name = "2"
                         },
                         new
                         {
-                            Id = new Guid("e79dad01-38b2-4a3e-8d65-50e54d530bd7"),
+                            Id = new Guid("2bb31ee6-7e26-426c-8884-060df781464b"),
                             Name = "3"
                         });
                 });
@@ -80,7 +83,7 @@ namespace DB.Migrations
 
                     b.HasIndex("DifficultyClassId");
 
-                    b.ToTable("Drivers");
+                    b.ToTable("Driver");
                 });
 
             modelBuilder.Entity("DB.Models.CargoEntity", b =>

@@ -1,5 +1,6 @@
 ﻿using DB.Models;
 using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
 
 namespace DB
 {
@@ -12,6 +13,8 @@ namespace DB
         public DbSet<Route> Routes { get; set; }
 
         public DbSet<DifficultyClass> DifficultyClasses { get; set; }
+
+        public DbSet<Driver> Drivers { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -29,30 +32,23 @@ namespace DB
         }
     }
 
-    public class Route : Entity
+    public class Driver : Entity
     {
-        public required string Destination { get; set; }
+        [MinLength(3)]
+        public string FirstName { get; set; } = null!;
 
-        public int? DistanceKm { get; set; }
+        [MinLength(3)]
+        public string LastName { get; set; } = null!;
 
-        public decimal? Price {  get; set; }
+        public string? Patronymic { get; set; }
 
-        public Guid DifficultyClassId {  get; set; }
+        public DateTime Birthdate { get; set; }
+
+        [Phone]
+        public string Phone {  get; set; } = null!;
+
+        public Guid DifficultyClassId { get; set; }
 
         public DifficultyClass? DifficultyClass { get; set; }
-
-        public override string ToString()
-            => Destination;
     }
-
-    public class DifficultyClass : Entity
-    {
-        public required string Name { get; set; }
-
-        public List<Route> routes { get; set; } = [];
-
-        public override string ToString()
-            => Name;
-    }
-
 }

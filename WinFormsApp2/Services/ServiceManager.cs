@@ -8,5 +8,7 @@ namespace WinFormsApp2.Services
         public CargoService CargoService { get; set; } = new();
         public RouteService RouteService { get; set; } = new();
         public DifficultyClassService DifficultyService { get; set; } = new();
+        public DriverService DriverService { get; set; } = new();
+
     }
 }

@@ -16,4 +16,10 @@
     <Folder Include="DTO\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="Forms\DriverForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+
 </Project>
